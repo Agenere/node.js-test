@@ -1,0 +1,13 @@
+예시)
+
+[team1-김동열] 외주비관리
+detail:
+<-Controller->
+ProjectCooperationManageController.java : 주소 url 수정
+
+<-Model->
+OrdersService.java: 주문시 예수금 차감과 주문내역 추가 수정
+
+<-View->
+financialIssues.html: 고객센터 내용 변경, 주식선물옵션 내용변경
+index.html: 로그아웃 팝업창

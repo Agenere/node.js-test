@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>게시판 상세보기</title>
+    </head>
+    <body>
+        <h1>게시판 상세보기</h1>
+        <a href="/logout"><button>로그아웃</button></a>
+        <table border="1">
+            <tr>
+                <th>번호</th>
+                <td><%= model.boardDetail.board_no %></td>
+            </tr>
+            <tr>
+                <th>제목</th>
+                <td><%= model.boardDetail.board_title %></td>
+            </tr>
+            <tr>
+                <th>내용</th>
+                <td><%= model.boardDetail.board_content %></td>
+            </tr>
+            <tr>
+                <th>작성자</th>
+                <td><%= model.boardDetail.board_user %></td>
+            </tr>
+            <tr>
+                <th>날짜</th>
+                <td><%= model.boardDetail.board_date %></td>
+            </tr>       
+            <tr>
+                <th>파일다운로드</th>
+                <td><a href="/uploads/<%= model.boardfile.boardfile_name %>" download><%= model.boardfile.boardfile_name %></a>
+                    </td>
+            </tr>     
+        </table>
+        <a href="/boardList" type="button"><button>목록</button></a>
+        <a href="/updateBoard/<%=model.boardDetail.board_no%>" type="button"><button>수정</button></a>
+        <a href="/deleteBoard/<%=model.boardDetail.board_no%>" type="button"><button>삭제</button></a>
+    </body>
+</html>
