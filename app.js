@@ -17,7 +17,6 @@ const storage = multer.diskStorage({
     }
 })
 const myMulter = multer({ limits: { fileSize: 5 * 1024 * 1024 },storage:storage});
-
 // mysql
 const conn = mysql.createConnection({
     host:'localhost',
@@ -52,8 +51,6 @@ app.use((req, res, next)=> {
 
 // 라우터 미들웨어
 const router = express.Router();
- 
-
     //회원가입
     //회원가입 폼
     router.get('/join',(req,res)=>{
